@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ca" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projecte IPO - Pensament Computacional</title>
+    <!-- Tailwind CSS per al disseny ràpid i modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons per als icones -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981', // Verd codi (estil Python)
+                        secondary: '#1e293b', // Pissarra fosc
+                        accent: '#f59e0b', // Taronja/Groc per a gamificació
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navegació -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="font-bold text-xl text-primary flex items-center gap-2">
+                <i class="ph ph-terminal-window text-2xl"></i>
+                <span>CFGM SMX - ITB</span>
+            </div>
+            <div class="hidden lg:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#context" class="hover:text-primary transition-colors">Context</a>
+                <a href="#metodologia" class="hover:text-primary transition-colors">Metodologia</a>
+                <a href="#avaluacio" class="hover:text-primary transition-colors">Avaluació</a>
+                <a href="#diversitat" class="hover:text-primary transition-colors">Diversitat i Competències</a>
+                <a href="#galeria" class="hover:text-primary transition-colors">Galeria</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Capçalera / Hero Section -->
+    <header class="bg-secondary text-white py-20 px-4 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <i class="ph ph-brackets-curly text-9xl absolute -top-10 -left-10 text-primary"></i>
+            <i class="ph ph-code text-9xl absolute bottom-10 right-10 text-primary"></i>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="text-primary font-semibold tracking-wider uppercase text-sm mb-4 block">Mòdul: IPO - Introducció a la Programació</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Bases del Pensament Computacional</h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Activitat d'ensenyament-aprenentatge sobre entorns de desenvolupament (IDE), estructures de control i codificació d'algorismes en Python.
+            </p>
+            <a href="#documentacio" class="inline-flex items-center gap-2 bg-primary hover:bg-emerald-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                <i class="ph ph-file-pdf text-xl"></i>
+                Descarregar Fitxa E-A
+            </a>
+        </div>
+    </header>
+
+    <!-- 1. Context, RA i Continguts -->
+    <section id="context" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-secondary mb-4">Contextualització i Projecte</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Informació general de l'activitat programada per a l'alumnat de Sistemes Microinformàtics i Xarxes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Contextualització -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl mb-4"><i class="ph-fill ph-info"></i></div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Dades Generals</h3>
+                <ul class="text-gray-600 space-y-2 text-sm">
+                    <li><strong>Família:</strong> Informàtica i comunicacions</li>
+                    <li><strong>Cicle:</strong> CFGM SMX</li>
+                    <li><strong>Durada:</strong> 8 hores (Sessions pràctiques)</li>
+                    <li><strong>Aplicació:</strong> Scripts (bash), gestió d'usuaris i fitxers en sistemes operatius.</li>
+                </ul>
+            </div>
+
+            <!-- Resultats d'Aprenentatge -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-2xl mb-4"><i class="ph-fill ph-target"></i></div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Resultat d'Aprenentatge (RA1)</h3>
+                <p class="text-sm text-gray-600 mb-3">Reconeix l'estructura d'un programa informàtic, identificant i relacionant els elements propis del llenguatge de programació (Python).</p>
+                <div class="text-xs font-semibold text-primary bg-green-50 inline-block px-3 py-1 rounded-full">CA 2.1, 2.2, 2.7 i 2.8</div>
+            </div>
+
+            <!-- Continguts -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-2xl mb-4"><i class="ph-fill ph-book-open"></i></div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Continguts Clau</h3>
+                <ul class="text-gray-600 space-y-2 text-sm">
+                    <li><i class="ph ph-check text-primary"></i> Ús d'IDE i execució (Google Colab).</li>
+                    <li><i class="ph ph-check text-primary"></i> Condicionals (if, elif, else).</li>
+                    <li><i class="ph ph-check text-primary"></i> Estructures de repetició (for, while).</li>
+                    <li><i class="ph ph-check text-primary"></i> Detecció i correcció d'errors bàsics.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Metodologia i Ludificació -->
+    <section id="metodologia" class="bg-secondary text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Metodologia E-A i Ludificació</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">El projecte combina l'exposició teòrica amb l'Aprenentatge Basat en Projectes (ABP) i mecàniques de gamificació per fomentar la motivació.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Recursos i Eines</h3>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Es fomenta el treball autònom a l'aula taller. L'alumnat utilitza <strong>Classroom</strong> per gestionar les entregues i eines com <strong>Google Colab</strong> per programar. També compten amb repositoris de GitHub amb "cheat sheets" (apunts) i <span class="text-accent font-semibold">El Còdex del Programador</span>, un espai de consulta fiable per seguir la pròpia evolució.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center"><i class="ph-fill ph-code text-3xl text-primary mb-2"></i><p class="font-semibold">Python / Colab</p></div>
+                    <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center"><i class="ph-fill ph-github-logo text-3xl text-gray-300 mb-2"></i><p class="font-semibold">GitHub</p></div>
+                    <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center"><i class="ph-fill ph-student text-3xl text-blue-400 mb-2"></i><p class="font-semibold">Classroom</p></div>
+                    <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center"><i class="ph-fill ph-game-controller text-3xl text-accent mb-2"></i><p class="font-semibold">Còdex / Jocs</p></div>
+                </div>
+            </div>
+
+            <!-- Nivells de ludificació -->
+            <h3 class="text-xl font-bold mb-6 text-center">Classificació d'Exercicis (Insígnies)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center relative overflow-hidden">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 relative z-10">🐣</div>
+                    <h4 class="text-xl font-bold text-yellow-400 mb-2 relative z-10">Baby Chicken</h4>
+                    <p class="text-sm text-gray-400 relative z-10">Nivell bàsic d'iniciació per consolidar sintaxi.</p>
+                </div>
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">⚔️</div>
+                    <h4 class="text-xl font-bold text-blue-400 mb-2">Young Warrior</h4>
+                    <p class="text-sm text-gray-400">Nivell mitjà que requereix concentració i relacionar conceptes.</p>
+                </div>
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">🐉</div>
+                    <h4 class="text-xl font-bold text-green-400 mb-2">Green Dragon</h4>
+                    <p class="text-sm text-gray-400">Nivell avançat. Reptes amb dificultat extra per potenciar el pensament lògic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Avaluació -->
+    <section id="avaluacio" class="py-16 px-4 max-w-7xl mx-auto bg-white">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-secondary mb-4">Sistema d'Avaluació</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Mecanismes per valorar l'assoliment dels resultats d'aprenentatge i millora contínua.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="border border-gray-200 rounded-2xl p-8 bg-gray-50">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2"><i class="ph-fill ph-clipboard-text text-primary"></i> Instruments i Evidències</h3>
+                <ul class="space-y-4 text-gray-600">
+                    <li class="flex gap-3">
+                        <i class="ph-bold ph-check mt-1 text-primary"></i>
+                        <div><strong>Pràctiques de programació:</strong> Resolució d'exercicis classificats pels nivells de ludificació.</div>
+                    </li>
+                    <li class="flex gap-3">
+                        <i class="ph-bold ph-check mt-1 text-primary"></i>
+                        <div><strong>Instruments:</strong> S'utilitzen rúbriques (per valorar la qualitat del codi), observació directa, llistes de control i proves pràctiques amb temps limitat.</div>
+                    </li>
+                    <li class="flex gap-3">
+                        <i class="ph-bold ph-check mt-1 text-primary"></i>
+                        <div><strong>Avaluació del procés:</strong> Feedback directe, anàlisi de resultats i avaluació de l'impacte de la ludificació per ajustar el ritme del curs.</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="border border-gray-200 rounded-2xl p-8 bg-gray-50">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2"><i class="ph-fill ph-chart-pie-slice text-primary"></i> Criteris de Qualificació</h3>
+                <p class="text-sm text-gray-600 mb-4">Ponderació orientativa pel càlcul de la nota del RA1 (24h):</p>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 mb-4 font-mono text-sm text-center">
+                    QRA1 = 10*Pt1 + 10*Pt2 + 10*Pt3 + 10*Pt4 + 60*P1
+                </div>
+                <p class="text-sm text-gray-600">
+                    Es valora la <strong>comprensió del codi</strong>, no només que funcioni. Els errors parcials no invaliden la pràctica (avaluació progressiva). La còpia sense comprensió penalitza greument.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Diversitat i Competències -->
+    <section id="diversitat" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Atenció a la Diversitat -->
+            <div>
+                <h2 class="text-3xl font-bold text-secondary mb-6">Atenció a la Diversitat</h2>
+                <p class="text-gray-600 mb-6">Tot i no haver-hi adaptacions curriculars significatives en FP (no es modifiquen els RA), s'apliquen mesures de flexibilització i suport:</p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0"><i class="ph-bold ph-arrows-split"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Flexibilització</h4>
+                            <p class="text-sm text-gray-600">Els exercicis per nivells i les activitats alternatives permeten ajustar el ritme d'aprenentatge a cada alumne/a sense reduir l'exigència.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center shrink-0"><i class="ph-bold ph-users-three"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Suport Educatiu</h4>
+                            <p class="text-sm text-gray-600">Temps addicional en proves, adaptació d'enunciats, tutoria entre iguals i seguiment proper de l'equip docent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competències Transversals i Contingència -->
+            <div>
+                <h2 class="text-3xl font-bold text-secondary mb-6">Competències i Contingència</h2>
+                
+                <h3 class="text-lg font-bold text-gray-800 mb-3 border-b pb-2">Competències Transversals</h3>
+                <ul class="grid grid-cols-2 gap-4 mb-8">
+                    <li class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-sm">
+                        <strong class="block text-primary"><i class="ph-fill ph-desktop"></i> Digital</strong> Interpretació i depuració de codi.
+                    </li>
+                    <li class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-sm">
+                        <strong class="block text-primary"><i class="ph-fill ph-users"></i> Treball Equip</strong> Suport mutu i col·laboració.
+                    </li>
+                    <li class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-sm">
+                        <strong class="block text-primary"><i class="ph-fill ph-briefcase"></i> Resp. Prof.</strong> Compliment de terminis i autonomia.
+                    </li>
+                    <li class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-sm">
+                        <strong class="block text-primary"><i class="ph-fill ph-lightbulb"></i> Innovació</strong> Resolució creativa (ludificació).
+                    </li>
+                </ul>
+
+                <h3 class="text-lg font-bold text-gray-800 mb-3 border-b pb-2">Pla de Contingència</h3>
+                <p class="text-sm text-gray-600">En cas de baixa del professorat, es disposa de tota la programació i recursos a Classroom. En cas de dificultats motrius o visuals de l'alumnat, el coordinador TIC assegura l'adaptació dels espais i programari.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. Galeria d'imatges -->
+    <section id="galeria" class="bg-gray-100 py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Galeria de l'Aula</h2>
+                <p class="text-gray-600">Un cop d'ull a l'entorn de treball, la concentració i el desenvolupament de pràctiques.</p>
+            </div>
+
+            <!-- Grid de Fotos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="group relative overflow-hidden rounded-2xl shadow-sm aspect-[4/3]">
+                    <img src="https://drive.google.com/file/d/15sCt7-B45WjvrDE4al0-gr8Ew88sBrEw/view?usp=sharing" alt="Alumnat programant" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 pt-12">
+                        <p class="text-white font-semibold">Resolució de reptes (Python)</p>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-2xl shadow-sm aspect-[4/3]">
+                    <img src="https://drive.google.com/file/d/1rL6w9e5RVuEFpgl3JmYvJyIERxeg5Ovc/view?usp=sharing" alt="Treball en equip" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 pt-12">
+                        <p class="text-white font-semibold">Treball col·laboratiu entre iguals</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-sm aspect-[4/3]">
+                    <img src="https://drive.google.com/file/d/1V7mZYwxOdzn5GjwOg8dRB5ZMtEBgkvfe/view?usp=sharing" alt="Pantalla de codi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 pt-12">
+                        <p class="text-white font-semibold">Ús d'entorns IDE i depuració</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Documentació (PDF) -->
+    <section id="documentacio" class="py-16 px-4 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-secondary mb-6">Descarregar Documentació</h2>
+        <p class="text-gray-600 mb-8">Accedeix a la fitxa completa del Projecte d'Ensenyament-Aprenentatge on es detallen exhaustivament tots els criteris i les rúbriques d'avaluació.</p>
+        
+        <div class="bg-white border-2 border-dashed border-gray-300 rounded-2xl p-8 max-w-lg mx-auto flex flex-col items-center hover:border-primary transition-colors">
+            <i class="ph ph-file-pdf text-6xl text-red-500 mb-4"></i>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Fitxa de Projecte_IPO.pdf</h3>
+            <p class="text-gray-500 text-sm mb-6">Autoria: Daniel Moreno Arellano · Llicència CC BY-NC-SA</p>
+            
+            <a href="https://drive.google.com/file/d/1ri3qB4ZJ0YI1sbaWkgnKEr3q3mn3IMCv/view?usp=sharing" class="bg-primary hover:bg-emerald-600 text-white font-semibold py-3 px-8 rounded shadow transition-colors flex items-center gap-2">
+                <i class="ph ph-download-simple text-xl"></i>
+                Descarregar Fitxa Oficial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-gray-400 py-10 text-center text-sm">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col items-center">
+            <div class="flex items-center gap-2 mb-4 text-gray-300">
+                <i class="ph-fill ph-student text-2xl"></i>
+                <span class="font-semibold text-lg">Institut Tecnològic de Barcelona</span>
+            </div>
+            <p class="mb-2">© 2026 Generalitat de Catalunya - Departament d'Educació.</p>
+            <p>CFGM Sistemes microinformàtics i xarxes (SMX) - Mòdul IPO</p>
+            <p class="mt-6 text-xs opacity-60">Aquesta llicència permet a altres barrejar, ajustar i construir a partir del seu treball per a fins no comercials (CC BY-NC-SA).</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+```
